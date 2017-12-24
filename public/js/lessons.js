@@ -7,8 +7,8 @@ const lessonCard = (element, user_data) => {
     event.preventDefault()
     if ($('#addLessonButton').html()){
       // Remove the listener if the button exists
-      $('#addLessonButton').empty()
-      $('#addLessonButton').remove()
+      $('#newButton').empty()
+      $('#newButton').remove()
     }
     // add a button and a listener to the modal menu
     $('.add_button').append(html)
