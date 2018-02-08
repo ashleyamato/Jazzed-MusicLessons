@@ -22,7 +22,7 @@ bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
 
 ## Navigating the Site
 
-
+![alt text](images/home.png)
 
 
 ## Project Planning
@@ -71,3 +71,7 @@ bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
 - DELETE /token
 
 ## Team Members
+
+* [Nigel Flippo](https://github.com/nigelflippo)
+* [Eddie Marovich](https://github.com/eddiemarovich)
+* [Frederick Engelhardt](https://github.com/FrederickEngelhardt)
