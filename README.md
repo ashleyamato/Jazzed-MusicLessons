@@ -18,7 +18,9 @@ knex seed:run
 ```shell
 bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
 ```
-3. Run tests using `npm test`
+3. Run ```npm start```
+4. A browser should open http://localhost:3000/
+5. Run tests using `npm test`
 
 ## Navigating the Site
 
