@@ -1,29 +1,49 @@
 # Music Lessons
 
-A web application for scheduling music lessons
+[Jazzed](https://jazzed.herokuapp.com/) is a web application for scheduling music lessons with local musicians. Users can instructors, view available time slots, and book lessons.
 
-## Heroku
-
-[Heroku App] (https://jazzed.herokuapp.com/)
-
-## Installation
+## Getting Started
 
 **Install Postgresql
 
-- Clone the repository and run `npm install`
+1. Clone the repository and run `npm install`
 ```shell
 createdb music_lessons_dev
 createdb music_lessons_test
 knex migrate:latest
 knex seed:run
 ```
-- Create the JWT_KEY
+2. Create the JWT_KEY
 
 ```shell
 bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
 ```
-- Run tests using `npm test`
+3. Run tests using `npm test`
 
+## Navigating the Site
+
+
+
+
+## Project Planning
+
+Task Management: https://trello.com/b/qFSJYITo/music-lessons-portal
+
+Wireframes: https://xd.adobe.com/view/53e24b1a-cddb-4d2e-8578-5ea2c928b772/
+
+## Style Guide
+
+- Materialize
+- Font - YuKyokasho
+- Pod Colors - #FAAD00 - yellow
+- Background - #333030 - dark grey
+- Font color - white / black
+- Logo border & background graphic - #95989A
+
+## JWT_KEY
+```shell
+bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
+```
 
 ## Routes
 
@@ -50,25 +70,4 @@ bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
 - POST /token
 - DELETE /token
 
-## Trello
-
-[Trello Board](https://trello.com/b/qFSJYITo/music-lessons-portal)
-
-
-## Style Guide
-
-- Materialize
-- Font - YuKyokasho
-- Pod Colors - #FAAD00 - yellow
-- Background - #333030 - dark grey
-- Font color - white / black
-- Logo border & background graphic - #95989A
-
-## Wire Frames
-
-[Wire Frames](https://xd.adobe.com/view/53e24b1a-cddb-4d2e-8578-5ea2c928b772/)
-
-## JWT_KEY
-```shell
-bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
-```
+## Team Members
