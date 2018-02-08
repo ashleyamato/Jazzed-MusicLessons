@@ -22,8 +22,23 @@ bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
 
 ## Navigating the Site
 
-![alt text](images/home.png)
+User will sign-up or sign in and land on the home page.
 
+![alt text](images/home.png) ![alt text](images/index.png)
+
+User can view their profile and make edits, including adding a photo or a short bio.
+
+User can then browse instructors that are offering lessons.
+
+![alt text](images/profile.png) ![alt text](images/instructors.png)
+
+User can view available lessons slots and then book one of these lessons.
+
+![alt text](images/lessons.png) ![alt text](images/confirm-lesson.png)
+
+This lesson will then populate the user's schedule page.
+
+![alt text](images/schedule.png)
 
 ## Project Planning
 
