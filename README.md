@@ -48,6 +48,9 @@ Task Management: https://trello.com/b/qFSJYITo/music-lessons-portal
 
 Wireframes: https://xd.adobe.com/view/53e24b1a-cddb-4d2e-8578-5ea2c928b772/
 
+Entity Relationship Diagram
+![alt text](Q2erd.png)
+
 ## Style Guide
 
 - Materialize
