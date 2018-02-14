@@ -1,6 +1,6 @@
 # Music Lessons
 
-[Jazzed](https://jazzed-music.herokuapp.com/) is a web application for scheduling music lessons with local musicians. Users can instructors, view available time slots, and book lessons.
+[Jazzed](https://jazzed-musiclessons.herokuapp.com/) is a web application for scheduling music lessons with local musicians. Users can instructors, view available time slots, and book lessons.
 
 ## Getting Started
 
