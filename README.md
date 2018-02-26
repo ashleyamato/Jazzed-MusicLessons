@@ -1,6 +1,6 @@
 # Music Lessons
 
-[Jazzed](https://jazzed-musiclessons.herokuapp.com/) is a web application for scheduling music lessons with local musicians. Users can instructors, view available time slots, and book lessons.
+[Jazzed](https://jazzed-musiclessons.herokuapp.com/) is a full-stack web application, featuring a mobile-first design, where users can schedule lessons with local musicians. Jazzed features the ability to sign up with either student or instructor capabilities. Students can browse instructors bios, available lesson slots, and sign up for lessons. Instructors can post available lessons and create an instructor profile with image uploading.
 
 ## Getting Started
 
@@ -26,21 +26,21 @@ bash -c 'echo "JWT_KEY="$(openssl rand -base64 64)' > .env
 
 User will sign-up or sign in and land on the home page.
 
-![alt text](images/home.png) ![alt text](images/index.png)
+![alt text](images/login.png) ![alt text](images/home.png)
 
-User can view their profile and make edits, including adding a photo or a short bio.
+User can view their profile and make edits, including uploading a photo or a short bio. If the user has instructor privileges, they can create an open lesson slot. 
 
-User can then browse instructors that are offering lessons.
+![alt text](images/bio.png) ![alt text](images/createLesson.png)
 
-![alt text](images/profile.png) ![alt text](images/instructors.png)
+User can then browse instructors that are offering lessons and view their available lesson slots.
 
-User can view available lessons slots and then book one of these lessons.
+![alt text](images/instructors.png) ![alt text](images/availLessons.png)
 
-![alt text](images/lessons.png) ![alt text](images/confirm-lesson.png)
+After booking a lesson, it will then populate the user's schedule page
 
-This lesson will then populate the user's schedule page.
+![alt text](images/confirmLesson.png) ![alt text](images/schedule.png)
 
-![alt text](images/schedule.png)
+
 
 ## Project Planning
 
@@ -51,14 +51,23 @@ Wireframes: https://xd.adobe.com/view/53e24b1a-cddb-4d2e-8578-5ea2c928b772/
 Entity Relationship Diagram
 ![alt text](Q2erd.png)
 
+## Technologies
+* Javascript/ES6
+* HTML
+* CSS
+* Materialize
+* Express
+* Knex
+* PostgreSQL
+
 ## Style Guide
 
-- Materialize
-- Font - YuKyokasho
-- Pod Colors - #FAAD00 - yellow
-- Background - #333030 - dark grey
-- Font color - white / black
-- Logo border & background graphic - #95989A
+* Materialize
+* Font - YuKyokasho
+* Pod Colors - #FAAD00 - yellow
+* Background - #333030 - dark grey
+* Font color - white / black
+* Logo border & background graphic - #95989A
 
 ## JWT_KEY
 ```shell
