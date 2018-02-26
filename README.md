@@ -1,4 +1,4 @@
-# Music Lessons
+# Jazzed
 
 [Jazzed](https://jazzed-musiclessons.herokuapp.com/) is a full-stack web application, featuring a mobile-first design, where users can schedule lessons with local musicians. Jazzed features the ability to sign up with either student or instructor capabilities. Students can browse instructors bios, available lesson slots, and sign up for lessons. Instructors can post available lessons and create an instructor profile with image uploading.
 
@@ -28,7 +28,7 @@ User will sign-up or sign in and land on the home page.
 
 ![alt text](images/login.png) ![alt text](images/home.png)
 
-User can view their profile and make edits, including uploading a photo or a short bio. If the user has instructor privileges, they can create an open lesson slot. 
+User can view their profile and make edits, including uploading a photo or a short bio. If the user has instructor privileges, they can create an open lesson slot.
 
 ![alt text](images/bio.png) ![alt text](images/createLesson.png)
 
