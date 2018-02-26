@@ -78,7 +78,7 @@ const editWindow = () => {
               <div class="row">
                 <form class="col s12">
                   <div class="row">
-                    <div placeholder='XXX-XXX-XXXX' class="input-field white col s12">
+                    <div placeholder='XXX-XXX-XXXX' class="input-field col s12">
                       <textarea id="bio" class="materialize-textarea"></textarea>
                       <label for="bio">Tell us about yourself.</label>
                     </div>

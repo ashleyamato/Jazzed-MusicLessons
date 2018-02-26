@@ -163,7 +163,6 @@ const editWindow = () => {
         <p>save changes</p>
       </a>
     </div>
-  <a href="#!" id="exit_edit" class="white-text waves-effect waves-green btn-small">Back</a>
   </div>
     `
   // note the above html an iframe was used to prevent the submit button from redirecting the form
