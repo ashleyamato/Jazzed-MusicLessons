@@ -186,15 +186,6 @@ const editWindow = () => {
     submitEdit()
   })
 
-  $('.dropify').dropify({
-    messages: {
-      'default': 'Drag and drop a picture here or click. File size no larger than 3mb. Square images only.',
-      'replace': 'Drag and drop or click to replace',
-      'remove': 'Remove',
-      'error': 'Ooops, something wrong happended.'
-    }
-  })
-
   $('#exit_edit').click((event) => {
     event.preventDefault()
     $.get('/token').done(data => {
