@@ -46,8 +46,10 @@ const createAccountOverview = (data) => {
   $('#bio').append(data[0].bio)
 }
 const getAccount = () => {
+
   $.get('/token', result => {
     const id = result.cookie.user_id
+
     $.get(`/users/${id}`).done((data) => {
       $('#first_name').append(data.first_name)
       $('#last_name').append(data.last_name)
@@ -58,6 +60,7 @@ const getAccount = () => {
     })
   })
 }
+
 const editWindow = () => {
   const editCard = `
   <div id="edit_card" class="card">
@@ -102,6 +105,7 @@ const editWindow = () => {
     submitEdit()
   })
 }
+
 const submitEdit = () => {
   let phone_number = $('#phone_number').val()
   let bio = $('#bio').val()
@@ -109,15 +113,18 @@ const submitEdit = () => {
     phone_number,
     bio
   }
+
   for (i in data) {
     if (data[i] === '') {
       delete data[i]
     }
   }
+
   $.get('/token', result => {
     user_id = result.cookie.user_id
   }).done((result) => {
     const id = result.cookie.user_id
+
     $.ajax({
       headers: {
         'Accept': 'application/json',
@@ -128,7 +135,6 @@ const submitEdit = () => {
       dataType: "json",
       success: function(msg) {
         if (msg) {
-          console.log(`User information was successfully update!`);
         } else {
           alert("Cannot add to list.")
         }
@@ -148,10 +154,3 @@ $(document).ready(() => {
     editWindow()
   })
 })
-
-
-
-
-/* Tests */
-// console.log(getAccount(1));
-// console.log(modifyAccount(1, {first_name: "I have Been Modified"}))

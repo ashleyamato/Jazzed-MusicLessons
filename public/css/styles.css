@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: 'yukyokasho', 'arial', 'helvetica';
-  /*font-weight: 100;*/
 }
 a {
     font-family: 'yukyokasho';
@@ -63,6 +62,7 @@ html {
 .title {
   padding: 50px;
 }
+
 #slogan {
   position: relative;
   top: -20px;
@@ -84,7 +84,6 @@ main {
   overflow: auto;
 }
 
-
 h1.index {
   display: flex;
   justify-content: center;
@@ -92,11 +91,13 @@ h1.index {
   padding-top: 56px;
   font-size: 80px;
 }
+
 h1.navigation {
   position: relative;
   top: -8px;
   font-size: 80px;
 }
+
 .container {
   position: relative;
   top: -50px;
@@ -123,6 +124,7 @@ main .container {
   color: white;
   padding: 20px;
 }
+
 .btn {
   background-color: #FAAD00;
   height: 60px;
@@ -141,49 +143,18 @@ main .container {
   opacity: 30%;
   height: 50%;
 }
+
 #pageDescription {
   border-radius: 25px;
   background-color: #FAAD00;
 }
 
-/* Beginning of home.html*/
-nav {
-  background-color: #FAAD00;
-  padding-left: 0%;
-  padding-right: 5%;
-}
-.nav-align {
-  padding-top: 0px;
-}
-.modal-text {
-  font-size: 200%;
-}
-label {
-  color: white;
-}
-.profBody {
-  font-size: 20px;
-}
-#profile_card {
-  color: white;
-}
-#edit_card_body {
-  color: white;
-  font-size: 20px;
-}
-#submitButton {
-  margin-top: 50px;
-  line-height: 25px;
-  padding-top: 5px;
-  font-size: 20px;
-  background-color: #FAAD00;
-}
 /*****index*****/
 #login_btn{
   background-color: #FAAD00;
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-
 }
+
 #editButton {
   line-height: 25px;
   margin-top: 25px;
@@ -191,6 +162,7 @@ label {
   background-color:#FAAD00;
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 #signup_btn{
   background-color: #FAAD00;
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -202,6 +174,44 @@ label {
 
 /*****start home*****/
 
+nav {
+  background-color: #FAAD00;
+  padding-left: 0%;
+  padding-right: 5%;
+}
+
+.nav-align {
+  padding-top: 0px;
+}
+
+.modal-text {
+  font-size: 200%;
+}
+
+label {
+  color: white;
+}
+.profBody {
+  font-size: 20px;
+}
+
+#profile_card {
+  color: white;
+}
+
+#edit_card_body {
+  color: white;
+  font-size: 20px;
+}
+
+#submitButton {
+  margin-top: 50px;
+  line-height: 25px;
+  padding-top: 5px;
+  font-size: 20px;
+  background-color: #FAAD00;
+}
+
 #loginScreenButton {
   line-height: 28px;
   height: 60px;
@@ -210,6 +220,7 @@ label {
   background-color: #FAAD00;
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 #browse_instructors {
   line-height: 28px;
   height: 60px;
@@ -218,6 +229,7 @@ label {
   background-color: #FAAD00;
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 #create_lesson {
   line-height: 28px;
   height: 60px;
@@ -226,6 +238,7 @@ label {
   background-color: #FAAD00;
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 #browse_lessons {
   padding: 11px;
   height: 60px;
@@ -234,6 +247,7 @@ label {
   background-color: #FAAD00;
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 #account_preferences {
   line-height: 28px;
   height: 60px;
@@ -242,6 +256,7 @@ label {
   background-color: #FAAD00;
   box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 #home_mySchedule_btn{
   padding: 15px;
   line-height: 28px;
@@ -257,10 +272,12 @@ label {
   top: 10px;
   line-height: 60px;
 }
+
 #account_preferences_modal {
   width: 90%;
   max-height: 90%;
 }
+
 #bio-text {
   color: black;
   font-size: 18
@@ -274,10 +291,12 @@ label {
   font-weight: 300;
   background-color: #FAAD00;
 }
+
 #createLessonBody {
   font-size:13px;
   color: white;
 }
+
 #new_lesson_modal {
   width: 95%;
 }
@@ -285,16 +304,14 @@ label {
 .lessonReq{
   padding-left: 0;
 }
-/* End of home menu*/
-
-
+/* End of home */
 
 /*****instructors*****/
-
 
 .card-title{
   font: black;
 }
+
 .card{
   margin: 20px;
 }
@@ -321,16 +338,17 @@ label {
 /*****end instructors*****/
 
 
-
-/*****lessons*****/
+/*****start lessons*****/
 #confirmButton {
   font-size: 20px;
   padding: 10px;
 }
+
 #cancelButton {
   font-size: 20px;
   padding: 10px;
 }
+
 #home_lessons_btn{
   line-height: inherit;
   margin-bottom: 80px;
@@ -354,13 +372,16 @@ label {
   font-size: 14px;
   color: #fff
 }
+
 #open_lesson_{
   background-color: #FAAD00;
 }
+
 #lesson_card_name{
   font-size: 20px;
   margin-bottom: 10px;
 }
+
 .white-text{
   font-size: 17px;
 }
@@ -368,11 +389,11 @@ label {
 .addLesson {
   font-size: 22px;
 }
+
 .table-row-lessons {
   height: 90px;
 }
 /*****end lessons*****/
-
 
 /*****my lessons*****/
 #home_my_lessons_btn{

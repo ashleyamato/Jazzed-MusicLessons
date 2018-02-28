@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   $('#loginScreenButton').on('click', (event) => {
     event.preventDefault()
     const email_address = $('#email').val()
@@ -10,7 +11,8 @@ $(document).ready(function() {
       dataType: 'json',
       type: 'POST',
       url: '/token'
-    };
+    }
+
     $.ajax(options)
       .done(() => {
         window.location.href = '/home.html'

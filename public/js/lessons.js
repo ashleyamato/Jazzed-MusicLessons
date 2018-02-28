@@ -3,14 +3,15 @@ const lessonCard = (element, user_data) => {
   <div id="newButton" class="row center">
     <a id="addLessonButton" class="modal-trigger btn waves-effect waves-light" type="submit" name="action" href="#open_lesson_confirmation_modal"><div id="lesson_add_text">Add Lesson</div></a>
     </div>`
+
   $(`#open_lesson_${element.id}`).click((event) => {
     event.preventDefault()
+
     if ($('#addLessonButton').html()){
-      // Remove the listener if the button exists
       $('#newButton').empty()
       $('#newButton').remove()
     }
-    // add a button and a listener to the modal menu
+
     $('.add_button').append(html)
     $(`#lesson_card_name`).html(element.lesson_name)
     $(`#lesson_card_instructor_name`).html(user_data.first_name)
@@ -25,13 +26,15 @@ const lessonCard = (element, user_data) => {
   })
 }
 const confirmationCard = (element, user_data) => {
+
   $(`#confirmButton`).click( (event) => {
+
     $.get('/token').done( (user_result) => {
       const user_identity = user_result.cookie.user_id
       let data = {
         user_client_id: user_identity
       }
-      console.log(data);
+
       $.ajax({
         headers: {
           'Accept': 'application/json',
@@ -42,7 +45,6 @@ const confirmationCard = (element, user_data) => {
         dataType: "json",
         success: function(msg) {
           if (msg) {
-            console.log(`Successfully added this lesson to your schedule.`);
           } else {
             alert("Cannot add to schedule.")
           }
@@ -55,13 +57,15 @@ const confirmationCard = (element, user_data) => {
   })
 }
 const getAllLessons = () => {
+
   $.get('/lessons').done(result => {
+
     result.forEach((element) => {
       const id = element.user_instructor_id
       const student = element.user_client_id
+
       if (student === null) {
         $.get(`/users/${id}`).done(user_data => {
-          // console.log(user_data);
           $('.build_tables').append(`
                 <tr id="tr_${element.id}" class = "lessons_table_font">
                   <td>${user_data.first_name}</td>
@@ -137,14 +141,14 @@ const createAccountOverview = (data) => {
 
 const ajaxGetLessons = () => {
   $.get('/lessons', (result) => {
-    console.log(result);
   })
 }
+
 const ajaxGetLessonId = (id) => {
   $.get(`/lessons/${id}`, (result) => {
-    console.log(result)
   })
 }
+
 const lessonPost = (data) => {
 
   $.ajax({
@@ -157,19 +161,14 @@ const lessonPost = (data) => {
     dataType: "json",
     success: function(msg) {
       if (msg) {
-        console.log("Lesson" + sendInfo.lesson_name + " was added in list !");
-        // location.reload(true);
-        /* Activate this refresh when we hit submit.
-        even better way is:
-        $('#thisdiv').load(document.URL +  ' #thisdiv');
-         */
       } else {
         alert("Cannot add to list !");
       }
     },
     data: JSON.stringify(data)
-  });
+  })
 }
+
 const lessonPatch = (id, data) => {
   $.ajax({
     headers: {
@@ -181,12 +180,6 @@ const lessonPatch = (id, data) => {
     dataType: "json",
     success: function(msg) {
       if (msg) {
-        console.log(`Lesson" ${sendInfo.lesson_name} was updated in the list !`);
-        // location.reload(true);
-        /* Activate this refresh when we hit submit.
-        even better way is:
-        $('#thisdiv').load(document.URL +  ' #thisdiv');
-         */
       } else {
         alert("Cannot add to list !");
       }
@@ -194,6 +187,7 @@ const lessonPatch = (id, data) => {
     data: JSON.stringify(data)
   })
 }
+
 const lessonDelete = (...id) => {
   id.forEach((element) => {
     $.ajax({
@@ -202,16 +196,15 @@ const lessonDelete = (...id) => {
     })
   })
 }
+
 $(document).ready(() => {
   $('.logout_text').append(` ${JSON.parse(localStorage.user_profile).email_address}`)
   getAllLessons()
-  $('.modal').modal();
+  $('.modal').modal()
   $('.button-collapse').sideNav({
-    menuWidth: 300, // Default is 300
-    edge: 'left', // Choose the horizontal origin
-    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    menuWidth: 300,
+    edge: 'left',
+    closeOnClick: true,
     draggable: true,
-    // onOpen: function(el) {}
-    // onClose: function(el) {}
   })
 })

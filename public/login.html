@@ -1,76 +1,65 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>login</title>
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./favicon.ico?" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="./js/login.js"></script>
+  </head>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="icon" href="./favicon.ico?" type="image/x-icon">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-  <!-- Compiled and minified JavaScript -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script src="./js/login.js"></script>
-
-</head>
-
-<body>
-  <nav>
-    <ul class="left">
-      <li><a href="index.html"><i class="material-icons">chevron_left</i></a></li>
-    </ul>
-  </nav>
-  <div class="row nav-align center">
-    <div class="white-text">
-      <h1 class="navigation">JAZZED</h1></div>
-    <div class="row">
-      <h5 id="slogan" class="white-text">MUSIC LESSONS MADE EASY</h5>
-    </div>
-  </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col s6 m3 l3">
-    </div>
-    <form class="form col s12 m6 l6">
-      <div class="row center">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email"><div class="white-text">Email</div></label>
-        </div>
-      </div>
+  <body>
+    <nav>
+      <ul class="left">
+        <li><a href="index.html"><i class="material-icons">chevron_left</i></a></li>
+      </ul>
+    </nav>
+    <div class="row nav-align center">
+      <div class="white-text">
+        <h1 class="navigation">JAZZED</h1></div>
       <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password"><div class="white-text">Password</div></label>
-        </div>
+        <h5 id="slogan" class="white-text">MUSIC LESSONS MADE EASY</h5>
       </div>
-    </form>
-  </div>
-</div>
-  <div class='row center'>
-    <button id="loginScreenButton" class="enterbutton btn waves-effect waves-light" type="submit" name="action">login</button>
-  </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col s6 m3 l3">
+        </div>
+        <form class="form col s12 m6 l6">
+          <div class="row center">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email"><div class="white-text">Email</div></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password"><div class="white-text">Password</div></label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class='row center'>
+      <button id="loginScreenButton" class="enterbutton btn waves-effect waves-light" type="submit" name="action">login</button>
+    </div>
 
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Instructions</h4>
-    <p class="modal-text">Please type in your username and password. Your username will be the email you signed up with.</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
-</body>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Instructions</h4>
+        <p class="modal-text">Please type in your username and password. Your username will be the email you signed up with.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+  </body>
 
 </html>

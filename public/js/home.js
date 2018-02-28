@@ -49,7 +49,7 @@ const checkPrivileges = () => {
       })
   })
 }
-/* These are all profile card functions*/
+
 const createAccountOverview = (data) => {
   const newCard = `
     <div id="myProfile">
@@ -90,8 +90,7 @@ const createAccountOverview = (data) => {
       <div class="row center">
         <button id="editButton" class="btn waves-effect waves-light" type="submit" name="action">Edit Profile</button>
       </div>
-    </div>
-        `
+    </div>`
 
   $('#edit_card').remove()
   $('#profile_card').append(newCard)
@@ -101,11 +100,13 @@ const createAccountOverview = (data) => {
   $('#email_address').append(data.email_address)
   $('#skill_level_id').append(data.skill_level_id)
   $('#bio').append(data.bio)
+
   $('#editButton').click(function(event) {
     event.preventDefault()
     editWindow()
   })
 }
+
 const getAccount = () => {
   $.get('/token').done( (result) => {
     const id = result.cookie.user_id
@@ -124,6 +125,7 @@ const getAccount = () => {
     })
   })
 }
+
 const editWindow = () => {
   const editCard = `
   <div id="edit_card">
@@ -163,24 +165,27 @@ const editWindow = () => {
         <p>save changes</p>
       </a>
     </div>
-  </div>
-    `
-  // note the above html an iframe was used to prevent the submit button from redirecting the form
+  </div>`
+
   $('#uploadForm2').submit(function(event) {
     event.preventDefault()
     alert('object updated')
   })
+
   $('#uploadForm').submit(function(event) {
     event.preventDefault()
     alert('object updated')
   })
+
   $('#myProfile').remove()
   $('#profile_card').append(editCard)
+
   $('#submitButton').click((event) => {
     event.preventDefault()
     $('#submit_avatar_form').submit()
     submitEdit()
   })
+
   $('.dropify').dropify({
     messages: {
       'default': 'Drag and drop a picture here or click. File size no larger than 3mb. Square images only.',
@@ -189,6 +194,7 @@ const editWindow = () => {
       'error': 'Ooops, something wrong happended.'
     }
   })
+
   $('#exit_edit').click((event) => {
     event.preventDefault()
     $.get('/token').done(data => {
@@ -198,6 +204,7 @@ const editWindow = () => {
     })
   })
 }
+
 const submitEdit = () => {
   let phone_number = $('#phone_number').val()
   let bio = $('#bio-text').val()
@@ -205,16 +212,19 @@ const submitEdit = () => {
     phone_number,
     bio,
   }
+
   for (i in data) {
     if (data[i] === '') {
       delete data[i]
     }
   }
+
   if (data === {} ) {
     $.get(`users/${localStorage.user_id}`).done( (results) =>{
       return createAccountOverview(results)
     })
   }
+
   $.get('/token', result => {
     user_id = result.cookie.user_id
   }).done((result) => {
@@ -229,7 +239,6 @@ const submitEdit = () => {
       dataType: "json",
       success: function(msg) {
         if (msg) {
-          console.log(`User information was successfully update!`);
         } else {
           alert("Cannot add to list.")
         }
@@ -240,6 +249,7 @@ const submitEdit = () => {
     })
   })
 }
+
 const createListeners = () => {
   $('#editButton').click(function(event) {
     event.preventDefault()
@@ -250,9 +260,7 @@ const createListeners = () => {
     submitEdit()
   })
 }
-/* End of profile functions */
 
-/* Beginning of instructor lesson creation fields*/
 const createLesson = (data) => {
   if (!data) {
     const lesson_name = $('#new_lesson_name').val()
@@ -261,6 +269,7 @@ const createLesson = (data) => {
     const location = $('#new_lesson_location').val()
     const cost = $('#new_lesson_cost').val()
     const instrument_type = $('#instrument_type').val()
+
     $.get('/token').done(result => {
       data = {
         user_client_id: null,
@@ -281,14 +290,12 @@ const createLesson = (data) => {
         dataType: "json",
         success: function(msg) {
           if (msg) {
-            console.log(`Lesson ${data.lesson_name} was added in list !`);
           } else {
             alert("Cannot add to list !");
           }
         },
         data: JSON.stringify(data)
       }).done((result) => {
-        console.log('You just posted a lesson!')
       })
       .fail(($xhr) => {
         Materialize.toast('Lesson not create. Please fill out all fields.', 3000)
@@ -296,6 +303,7 @@ const createLesson = (data) => {
     })
   }
 }
+
 const createLessonModal = () => {
   const html = `
   <div id="new_lesson_modal" class="grey darken-3 modal">
@@ -353,50 +361,46 @@ const createLessonModal = () => {
         </div>
       </div>
     </div>
-  </div>
-    `
+  </div>`
+
   $('#create_lesson_modal_insert').html(html)
-  // #NOTE you need this listener
   $('.modal').modal({
-    dismissible: true, // Modal can be dismissed by clicking outside of the modal
-    opacity: .5, // Opacity of modal background
-    inDuration: 300, // Transition in duration
-    outDuration: 200, // Transition out duration
-    startingTop: '4%', // Starting top style attribute
-    endingTop: '10%', // Ending top style attribute
-    // ready: function(modal, trigger) {
-    // },
-    // complete: function() {}
+    dismissible: true,
+    opacity: .5,
+    inDuration: 300,
+    outDuration: 200,
+    startingTop: '4%',
+    endingTop: '10%',
   })
+
   $('#createLessonSubmitButton').click((event) => {
     event.preventDefault()
     createLesson()
   })
 }
+
 $(document).ready(() => {
   checkPrivileges()
   getAccount()
   $("#input-file-now").click(function(event) {
     event.preventDefault()
   })
+
   $('.modal').modal({
-    dismissible: true, // Modal can be dismissed by clicking outside of the modal
-    opacity: .5, // Opacity of modal background
-    inDuration: 300, // Transition in duration
-    outDuration: 200, // Transition out duration
-    startingTop: '4%', // Starting top style attribute
-    endingTop: '10%', // Ending top style attribute
-    // ready: function(modal, trigger) {
-    // },
-    // complete: function() {}
+    dismissible: true,
+    opacity: .5,
+    inDuration: 300,
+    outDuration: 200,
+    startingTop: '4%',
+    endingTop: '10%',
   })
+
   $('.button-collapse').sideNav({
-    menuWidth: 300, // Default is 300
-    edge: 'left', // Choose the horizontal origin
-    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    menuWidth: 300,
+    edge: 'left',
+    closeOnClick: true,
     draggable: true,
-    // onOpen: function(el) {}
-    // onClose: function(el) {}
   })
+
   createListeners()
 })

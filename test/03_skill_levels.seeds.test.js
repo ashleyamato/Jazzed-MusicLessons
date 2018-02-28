@@ -10,7 +10,6 @@ suite('03_skill_levels seeds', addDatabaseHooks(() => {
   test('skill levels rows', (done) => {
     knex('skill_levels').orderBy('id', 'ASC')
       .then((actual) => {
-        /* eslint-disable max-len */
         const expected = [{
           id: 1,
           skill_level: 'Beginner'

@@ -23,12 +23,6 @@ const editAccount = (id, data) => {
      dataType: "json",
      success: function (msg) {
          if (msg) {
-             console.log(`User ${id} was added in list !`);
-             // location.reload(true);
-             /* Activate this refresh when we hit submit.
-             even better way is:
-             $('#thisdiv').load(document.URL +  ' #thisdiv');
-              */
          } else {alert("Cannot add to list !")}
      },
      data: JSON.stringify(data)
@@ -39,20 +33,10 @@ const editWindow = () => {
   $.get('/token', result => {
     const id = result.cookie.user_id
   })
-  // getAccount()
 }
+
 $(document).ready( () => {
-  console.log(getAccount())
   $('.editButton').click(function(event){
     event.preventDefault()
-    console.log('clicked');
   })
-  // editWindow()
 })
-
-
-
-
-/* Tests */
-// console.log(getAccount(1));
-// console.log(modifyAccount(1, {first_name: "I have Been Modified"}))
